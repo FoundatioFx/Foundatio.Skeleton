@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4427EE9-7D64-4431-B145-7B9E58AB516E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Foundatio.Skeleton.Domain</RootNamespace>
+    <AssemblyName>Foundatio.Skeleton.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Elasticsearch.Net.1.9.1\lib\net45\Elasticsearch.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Exceptionless.DateTimeExtensions, Version=3.2.55.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Exceptionless.DateTimeExtensions.3.2.55\lib\net45\Exceptionless.DateTimeExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foundatio, Version=4.2.1183.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Foundatio.4.2.1183\lib\net46\Foundatio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foundatio.Logging.NLog, Version=4.2.1183.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Foundatio.Logging.NLog.4.2.1183\lib\net46\Foundatio.Logging.NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foundatio.Parsers.ElasticQueries, Version=1.0.102.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Foundatio.Parsers.ElasticQueries.1.0.102\lib\net46\Foundatio.Parsers.ElasticQueries.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foundatio.Parsers.LuceneQueries, Version=1.0.102.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Foundatio.Parsers.LuceneQueries.1.0.102\lib\net46\Foundatio.Parsers.LuceneQueries.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foundatio.Repositories, Version=2.0.270.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Foundatio.Repositories.2.0.270\lib\net46\Foundatio.Repositories.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foundatio.Repositories.Elasticsearch, Version=2.0.270.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Foundatio.Repositories.Elasticsearch.2.0.270\lib\net46\Foundatio.Repositories.Elasticsearch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NCrontab, Version=3.1.19111.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ncrontab.3.1.0\lib\net45\NCrontab.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NEST.1.9.1\lib\net45\Nest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Concurrent, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Coordination, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Coordination.1.0.2\lib\net46\Nito.AsyncEx.Coordination.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Tasks.1.0.1\lib\net46\Nito.AsyncEx.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.Collections.Deque, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Collections.Deque.1.0.0\lib\portable45-net45+win8+wp8+wpa81\Nito.Collections.Deque.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.Disposables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Disposables.1.0.0\lib\portable45-net45+win8+wp8+wpa81\Nito.Disposables.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.3.9\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pegasus.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=28c69b6c6d100f4a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pegasus.3.1.2\lib\net40\Pegasus.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.9.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RazorEngine.3.9.0\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.3.2.2\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Extensions.ExecutionContextScoping, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.Extensions.ExecutionContextScoping.3.2.2\lib\net45\SimpleInjector.Extensions.ExecutionContextScoping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Topshelf, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Topshelf.4.0.2\lib\net452\Topshelf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Extensions\CryptoExtensions.cs" />
+    <Compile Include="Jobs\CronService.cs" />
+    <Compile Include="Jobs\MigrationJob.cs" />
+    <Compile Include="Jobs\TopshelfJob.cs" />
+    <Compile Include="Mail\Models\PasswordResetEmailAddressNotFoundModel.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\TokenResult.cs" />
+    <Compile Include="Models\WorkItems\BulkEditWorkItem.cs" />
+    <Compile Include="Models\WorkItems\UserProfileWorkItem.cs" />
+    <Compile Include="Models\FieldDelta.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\ElasticSearchExtensions.cs" />
+    <Compile Include="Mail\WhitelistMailSender.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\WorkItems\ExportWorkItem.cs" />
+    <Compile Include="Models\Helpers\StorageHelper.cs" />
+    <Compile Include="Models\WorkItems\FilterWorkItem.cs" />
+    <Compile Include="Extensions\ElasticSearchIndexExtensions.cs" />
+    <Compile Include="Repositories\Configuration\NotificationType.cs" />
+    <Compile Include="Repositories\Configuration\TokenType.cs" />
+    <Compile Include="Repositories\Configuration\UserType.cs" />
+    <Compile Include="Repositories\Configuration\OrganizationType.cs" />
+    <Compile Include="Repositories\Configuration\AppElasticConfiguration.cs" />
+    <Compile Include="Repositories\Configuration\LogstashIndex.cs" />
+    <Compile Include="Repositories\Configuration\OrganizationIndex.cs" />
+    <Compile Include="Repositories\Interfaces\INotificationRepository.cs" />
+    <Compile Include="Repositories\NotificationRepository.cs" />
+    <Compile Include="Repositories\Query\AppQuery.cs" />
+    <Compile Include="Repositories\Query\Parts\OrganizationIdQuery.cs" />
+    <Compile Include="Repositories\Query\Parts\QueryBuilders.cs" />
+    <Compile Include="Repositories\Query\SystemFilterQuery.cs" />
+    <Compile Include="Models\Enums\AuthorizationRoles.cs" />
+    <Compile Include="Models\Enums\AuthType.cs" />
+    <Compile Include="Models\Enums\NotificationMode.cs" />
+    <Compile Include="Models\Enums\ResponseStatusType.cs" />
+    <Compile Include="Models\Extensions\OrganizationExtensions.cs" />
+    <Compile Include="Models\Extensions\UserExtensions.cs" />
+    <Compile Include="Models\Interfaces\IOwnedByOrganization.cs" />
+    <Compile Include="Models\Interfaces\IOwnedByOrganizationWithIdentity.cs" />
+    <Compile Include="Models\Messaging\EntityChanged.cs" />
+    <Compile Include="Models\Messaging\UserMembershipChanged.cs" />
+    <Compile Include="Models\Organization.cs" />
+    <Compile Include="Models\Token.cs" />
+    <Compile Include="Models\TokenHelper.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Interfaces\ILogRepository.cs" />
+    <Compile Include="Repositories\LogRepository.cs" />
+    <Compile Include="Repositories\Base\RepositoryOwnedByOrganization.cs" />
+    <Compile Include="Repositories\Interfaces\IRepositoryOwnedByOrganization.cs" />
+    <Compile Include="Repositories\Interfaces\IOrganizationRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITokenRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IUserRepository.cs" />
+    <Compile Include="Repositories\OrganizationRepository.cs" />
+    <Compile Include="Repositories\TokenRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Services\IdentityService.cs" />
+    <Compile Include="Services\ITemplatedMailService.cs" />
+    <Compile Include="Services\TemplatedMailService.cs" />
+    <Compile Include="Mail\Models\AddedToOrganizationModel.cs" />
+    <Compile Include="Mail\Models\InviteModel.cs" />
+    <Compile Include="Mail\Models\MailModelBase.cs" />
+    <Compile Include="Mail\Models\UserModel.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
+    <Compile Include="Services\SampleDataService.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Validators\EmailValidator.cs" />
+    <Compile Include="Validators\InviteValidator.cs" />
+    <Compile Include="Validators\NotificationValidator.cs" />
+    <Compile Include="Validators\OrganizationValidator.cs" />
+    <Compile Include="Validators\TokenValidator.cs" />
+    <Compile Include="Validators\UserValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{FAF735A2-F32E-4087-BC81-BAD08B975156}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mail\Templates\email.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\AddedToOrganization\Html.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\AddedToOrganization\PlainText.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Mail\Templates\AddedToOrganization\Subject.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Mail\Templates\Invite\Html.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\Invite\PlainText.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Mail\Templates\Invite\Subject.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Mail\Templates\PasswordReset\Html.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\PasswordReset\PlainText.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\PasswordResetEmailAddressNotFound\Html.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\PasswordResetEmailAddressNotFound\PlainText.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Mail\Templates\PasswordResetEmailAddressNotFound\Subject.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mail\Templates\PasswordReset\Subject.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Mail\Templates\VerifyEmail\Html.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mail\Templates\VerifyEmail\PlainText.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Mail\Templates\VerifyEmail\Subject.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Mail\Templates\_Layout.html.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Pegasus.3.1.2\build\Pegasus.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Pegasus.3.1.2\build\Pegasus.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Pegasus.3.1.2\build\Pegasus.targets" Condition="Exists('..\..\packages\Pegasus.3.1.2\build\Pegasus.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

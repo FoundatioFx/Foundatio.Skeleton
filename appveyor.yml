@@ -1,0 +1,63 @@
+version: 1.0.{build}
+os: Visual Studio 2015
+configuration: Release
+platform: Any CPU
+clone_depth: 2
+
+environment:
+  JAVA_HOME: C:\Program Files (x86)\Java\jdk1.8.0
+  ES_VERSION: 1.7.5
+
+install:
+  - ps: $env:GIT_HASH = $env:APPVEYOR_REPO_COMMIT.Substring(0, 10)
+  - ps: .\Tools\Get-AppScope.ps1
+
+before_build:
+  - nuget sources add -Name ES -Source https://www.myget.org/F/elasticsearch-net-legacy/api/v3/index.json
+  - nuget restore -verbosity quiet
+  - ps: .\Tools\Start-ElasticSearch.ps1
+  - SET PATH="C:\Program Files (x86)\MSBuild\14.0\Bin";%PATH%"
+
+assembly_info:
+  patch: true
+  file: Source\GlobalAssemblyInfo.cs
+  assembly_version: "{version}.0"
+  assembly_file_version: "{version}.0"
+  assembly_informational_version: "{version} $(GIT_HASH)"
+
+build:
+  project: LearningMachine.sln
+  parallel: true
+  verbosity: minimal
+
+on_failure:
+#  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+test:
+  assemblies:
+    - LearningMachine.UnitTests.dll
+    - LearningMachine.IntegrationTests.dll
+
+after_test:
+  - ps: .\Tools\Package-Artifacts.ps1
+
+artifacts:
+  - path: api_artifacts
+    name: '$(BuildAppScopePrefix)crm-api'
+    type: zip
+  - path: jobs_artifacts
+    name: '$(BuildAppScopePrefix)crm-jobs'
+    type: zip
+
+notifications:
+- provider: Slack
+  channel: '#lmbot'
+  auth_token:
+    secure: RsMRZ3Y117+f4KGVTuNhMnVwBw7frzyil9X+aZWu9cKtAT35DoDtpwaHp545aiCN
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
+
+deploy:
+- provider: Environment
+  name: 'CRM Builds'

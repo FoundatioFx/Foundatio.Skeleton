@@ -1,0 +1,7 @@
+﻿@inherits RazorSharpEmail.EmailTemplate<GoodProspect.Core.Mail.Models.UserModel>
+Hello @Model.User.FullName,
+
+We're ready to activate your Learning Machine account.
+
+@Model.BaseUrl/account/verify?token=@Model.User.VerifyEmailAddressToken
+

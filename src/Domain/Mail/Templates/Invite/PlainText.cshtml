@@ -1,0 +1,5 @@
+﻿@inherits RazorSharpEmail.EmailTemplate<Foundatio.Skeleton.Domain.Mail.Models.InviteModel>
+
+You have been invited to join Foundatio Skeleton. Please use the link below to join your team.
+
+@Model.BaseUrl/#/signup/invite/@Model.Invite.Token

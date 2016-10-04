@@ -1,0 +1,6 @@
+﻿@inherits RazorSharpEmail.EmailTemplate<Foundatio.Skeleton.Domain.Mail.Models.UserModel>
+Hello @Model.User.FullName,
+
+We're ready to activate your Foundatio Skeleton account.
+
+@Model.BaseUrl/#/verifyemail/@Model.User.VerifyEmailAddressToken

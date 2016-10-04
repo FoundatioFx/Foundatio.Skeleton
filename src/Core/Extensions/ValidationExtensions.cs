@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using FluentValidation;
+using FluentValidation.Results;
+using Foundatio.Skeleton.Core.Validators;
+
+namespace Foundatio.Skeleton.Core.Extensions {
+    public static class ValidationExtensions {
+        public static string ToErrorMessage(this IEnumerable<ValidationFailure> failures) {
+            return failures == null ? null : String.Join(Environment.NewLine, failures.Select(f => f.ErrorMessage));
+        }
+
+        public static IRuleBuilderOptions<T, TProperty> IsObjectId<T, TProperty>(this IRuleBuilder<T, TProperty> ruleBuilder) {
+            return ruleBuilder.SetValidator(new IsObjectIdValidator());
+        }
+
+        public static bool TryValidate<T>(this AbstractValidator<T> validator, T value)
+        {
+            try
+            {
+                validator.ValidateAndThrow(value);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+﻿@inherits RazorSharpEmail.EmailTemplate<Foundatio.Skeleton.Domain.Mail.Models.UserModel>
+@{ Layout = "_Layout.html.cshtml"; }
+
+<!-- BODY -->
+
+<div class="content" style="margin: 0 auto; padding: 15px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 720px; min-width: 600px; display: block; text-align: center; background-color: #f7f8f9; border-top: 5px solid #0088cc;">
+
+    <h2 style="font-size: 22px;line-height:36px;font-weight:bold;color:#47525D;text-align: center; margin-top: 40px; margin-bottom: 20px;">Hello @Model.User.FullName,</h2>
+
+   <p style="font-size:18px;line-height:24px;margin-bottom:18px;color:#6d6d6d;text-align: center;">
+         We're ready to activate your Foundatio Skeleton account.</p>
+
+
+ <!-- Button -->
+  <p class="center" style="margin: 10px auto 0 auto; padding: 0; font-family: 'Open Sans', arial, sans-serif; margin-bottom: 10px; font-weight: normal; font-size: 14px; line-height: 1.6; text-align: center;">
+      <a class="btn" href="@Model.BaseUrl/#/verifyemail/@Model.User.VerifyEmailAddressToken" rel="notrack" target="_blank" style="margin: 10px auto 24px;padding: 14px;font-size: 16px;min-width: 220px;color: #fff;text-decoration: none;background-color: #2ab27b;font-weight: bold;margin-right: 10px;text-align: center;display: inline-block;border-radius: 3px;">Verify Email Address</a>
+  </p>
+
+
+<hr style="margin:1.5rem 0;width:100%;border:none;border-bottom:1px solid #ededed">
+
+  <table cellspacing="0" cellpadding="0" border="0" style="margin:0 auto 6px 0;width:100%">
+    <tbody><tr style="border:0">
+      <td valign="top" align="center" style="border:0;margin:0;padding:30px 0">
+        <table border="0" cellpadding="0" cellspacing="0" style="margin:0">
+          <tbody><tr style="border:0">
+            <td align="center" valign="middle" style="border:0;margin:0">
+              <a href="http://www.foundatio.com" title="Visit Foundatio Skeleton" style="color:#ccc;text-decoration:none" target="_blank">
+                Foundatio Skeleton
+              </a>
+            </td>
+          </tr>
+        </tbody></table>
+
+      </td>
+    </tr>
+  </tbody></table>
+
+</div>
+
+<!-- /BODY -->
