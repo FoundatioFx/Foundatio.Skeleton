@@ -1,0 +1,7 @@
+node_modules
+materialize-css
+typings
+scripts/*-bundle.js
+scripts/*-bundle.js.map
+.idea
+.DS_STORE
