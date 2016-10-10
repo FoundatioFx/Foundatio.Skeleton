@@ -1,0 +1,10 @@
+<template bindable="router">
+  <md-navbar>
+    <a href="#/samples/navbar" class="brand-logo"><span>${router.title}</span></a>
+    <ul class="hide-on-med-and-down right">
+      <li md-waves repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+        <a data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse.in" href.bind="row.href">${row.title}</a>
+      </li>
+    </ul>
+  </md-navbar>
+</template>
