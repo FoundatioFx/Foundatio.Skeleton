@@ -1,4 +1,5 @@
-# Foundatio Skeleton
+![Foundatio](https://raw.githubusercontent.com/FoundatioFx/Foundatio/master/media/foundatio.png "Foundatio")
+
 Foundatio Skeleton
 
 # Build
