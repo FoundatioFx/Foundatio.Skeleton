@@ -1,0 +1,29 @@
+@host = http://localhost:5000
+
+### List all users
+GET {{host}}/api/users
+
+### Create a user
+# @name createUser
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "fullName": "Test User",
+  "emailAddress": "test@localhost"
+}
+
+### Get a user by id
+GET {{host}}/api/users/{{createUser.response.body.id}}
+
+### Update a user
+PUT {{host}}/api/users/{{createUser.response.body.id}}
+Content-Type: application/json
+
+{
+  "fullName": "Updated User",
+  "emailAddress": "updated@localhost"
+}
+
+### Delete a user
+DELETE {{host}}/api/users/{{createUser.response.body.id}}

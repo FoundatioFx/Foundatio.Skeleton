@@ -1,0 +1,10 @@
+@host = http://localhost:5000
+
+### Health check
+GET {{host}}/health
+
+### Status
+GET {{host}}/api/status
+
+### Prometheus metrics
+GET {{host}}/metrics

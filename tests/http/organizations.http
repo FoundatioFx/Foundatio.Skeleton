@@ -1,0 +1,19 @@
+@host = http://localhost:5000
+
+### List all organizations
+GET {{host}}/api/organizations
+
+### Create an organization
+# @name createOrganization
+POST {{host}}/api/organizations
+Content-Type: application/json
+
+{
+  "name": "Test Organization"
+}
+
+### Get an organization by id
+GET {{host}}/api/organizations/{{createOrganization.response.body.id}}
+
+### Delete an organization
+DELETE {{host}}/api/organizations/{{createOrganization.response.body.id}}
