@@ -1,0 +1,22 @@
+{
+    "name": "Foundatio.Skeleton",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "streetsidesoftware.code-spell-checker",
+                "humao.rest-client"
+            ]
+        }
+    },
+    "forwardPorts": [5000],
+    "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+    "features": {
+        "ghcr.io/devcontainers/features/powershell:1": {},
+        "ghcr.io/devcontainers/features/dotnet:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    }
+}

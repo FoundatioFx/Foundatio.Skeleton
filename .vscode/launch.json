@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Aspire AppHost",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/src/Foundatio.Skeleton.AppHost/Foundatio.Skeleton.AppHost.csproj"
+        },
+        {
+            "name": "Web API",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/src/Foundatio.Skeleton.Web/Foundatio.Skeleton.Web.csproj"
+        }
+    ]
+}

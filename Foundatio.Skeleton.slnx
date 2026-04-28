@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".github/workflows/build.yaml" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="NuGet.Config" />
+    <File Path="README.md" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Solution Items/http/">
+    <File Path="tests/http/status.http" />
+    <File Path="tests/http/users.http" />
+    <File Path="tests/http/organizations.http" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Foundatio.Skeleton.Jobs/Foundatio.Skeleton.Jobs.csproj" />
+  </Folder>
+  <Project Path="src/Foundatio.Skeleton.AppHost/Foundatio.Skeleton.AppHost.csproj" />
+  <Project Path="src/Foundatio.Skeleton.Core/Foundatio.Skeleton.Core.csproj" />
+  <Project Path="src/Foundatio.Skeleton.Insulation/Foundatio.Skeleton.Insulation.csproj" />
+  <Project Path="src/Foundatio.Skeleton.Web/Foundatio.Skeleton.Web.csproj" />
+  <Project Path="tests/Foundatio.Skeleton.Tests/Foundatio.Skeleton.Tests.csproj" />
+</Solution>

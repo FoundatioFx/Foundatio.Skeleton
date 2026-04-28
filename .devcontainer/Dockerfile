@@ -1,0 +1,1 @@
+FROM mcr.microsoft.com/devcontainers/dotnet:10.0
