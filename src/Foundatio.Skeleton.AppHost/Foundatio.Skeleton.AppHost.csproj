@@ -7,7 +7,7 @@
     <UserSecretsId>foundatio-skeleton-apphost</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.Redis" Version="13.3.0" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="13.3.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Foundatio.Skeleton.Web\Foundatio.Skeleton.Web.csproj" />
