@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
   <ItemGroup>
-    <PackageReference Include="Foundatio.Mediator" Version="1.0.1" />
+    <PackageReference Include="Foundatio.Mediator" Version="1.2.1" />
     <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.15.3" />
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.15.3" />
     <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.15.1" />

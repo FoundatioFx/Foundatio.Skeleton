@@ -10,7 +10,6 @@
     <RepositoryUrl>https://github.com/FoundatioFx/Foundatio.Skeleton</RepositoryUrl>
     <Authors>Foundatio</Authors>
     <NoWarn>$(NoWarn);CS1591;</NoWarn>
-    <WarningsNotAsErrors></WarningsNotAsErrors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

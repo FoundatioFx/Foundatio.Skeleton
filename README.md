@@ -25,7 +25,7 @@ A modern .NET 10 skeleton application built with [Foundatio](https://github.com/
 ### Run with Aspire (recommended)
 
 ```bash
-dotnet run --project src/Foundatio.Skeleton.AppHost
+aspire run
 ```
 
 This starts Redis, Mailpit, and the Web API with the Aspire dashboard for traces/metrics/logs.
